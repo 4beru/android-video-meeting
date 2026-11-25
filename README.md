@@ -1,131 +1,528 @@
-![Meeting Room Compose](https://github.com/GetStream/stream-video-android/assets/24237865/23f0d41a-a02e-46fa-9f9c-8e390b783a61)
+<div align="center">
 
-<p align="center">
-  <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
-  <a href="https://android-arsenal.com/api?level=21"><img alt="API" src="https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat"/></a>
-  <a href="https://github.com/GetStream/meeting-room-compose/actions/workflows/android.yml"><img alt="Build Status" src="https://github.com/GetStream/meeting-room-compose/actions/workflows/android.yml/badge.svg"/></a>
-  <a href="https://getstream.io?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/HayesGordon/e7f3c4587859c17f3e593fd3ff5b13f4/raw/11d9d9385c9f34374ede25f6471dc743b977a914/badge.json" alt="Stream Feeds"></a>
-</p>
+  <img
+    src="./previews/android-head_flat.png"
+    alt="Android"
+    width="76"
+  />
 
-This is a real-time meeting room app built with Jetpack Compose and [Stream Video SDK for Compose](https://getstream.io/video/docs/android?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss), with a design reminiscent of Google Meet.
+  <h1>Meeting Room</h1>
 
-The primary objective of this repository is to showcase the following:
+  <p>
+    <strong>Making distance feel a little smaller.</strong>
+  </p>
 
-- Complete implementation of UI components using Jetpack Compose.
-- Development of a real-time meeting room application with a seamless user experience, designed in a Google Meet style by customizing [CallContent](https://getstream.io/video/docs/android/ui-components/call/call-content?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss) and [ParticipantVideo](https://getstream.io/video/docs/android/ui-components/participants/participant-video?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss).
-- Creation of a lobby screen that provides control over physical devices before joining a meeting room, including toggling the camera/microphone and flipping the camera view.
-- Illustration of multiple participants connecting from various platforms, such as web and Android.
+  <p>
+    A native Android video conferencing application exploring
+    real-time communication, interactive meeting experiences,
+    and multimedia integration with Kotlin and Jetpack Compose.
+  </p>
 
-## ✍️ Technical Content
+  <p>
+    Android · Kotlin · Jetpack Compose · WebRTC
+  </p>
 
-If you're keen on learning about constructing a real-time meeting room application using Jetpack Compose, we recommend exploring **[Build a Real-Time Meeting Room App for Android With Jetpack Compose](https://getstream.io/blog/compose-meeting-room/)**.
+  <p>
+    <a href="#about">About</a> ·
+    <a href="#app-preview">Preview</a> ·
+    <a href="#features">Features</a> ·
+    <a href="#under-the-hood">Under the Hood</a> ·
+    <a href="#getting-started">Getting Started</a>
+  </p>
 
-## :bulb: Additional Repositories
+  <img
+    src="./previews/meeting-room_eyecatch.png"
+    alt="Meeting Room — a native video conferencing experience for Android"
+    width="100%"
+  />
 
-If you're interested in exploring more repositories that utilize Jetpack Compose and Stream SDK, take a look at the following repositories:
+  <br />
 
-- [ChatGPT Android](https://github.com/skydoves/chatgpt-android): 📱 ChatGPT Android demonstrates OpenAI's ChatGPT on Android with Stream Chat SDK for Compose.
-- [Whats App Clone Compose](https://github.com/getStream/whatsApp-clone-compose): 📱 WhatsApp clone project demonstrates modern Android development built with Jetpack Compose and Stream Chat SDK for Compose.
-- [Slack Clone Android](https://github.com/GetStream/stream-slack-clone-android): 📱 A chat demo app built with Jetpack Compose and Stream Chat SDK following clean architecture principles.
-- [Stream Draw Android](https://github.com/getStream/stream-draw-android): 🛥 Stream Draw is a real-time multiplayer drawing & chat game app built entirely with Jetpack Compose.
-- [Facebook Messenger Clone](https://github.com/MathRoda/Messenger-clone): Facebook Messenger clone using Stream SDK & Jetpack Compose.
+  <sub>
+    Early Works · Native Android Development · Real-Time Communication
+  </sub>
 
-## 📲 Download APK
-Go to the [Releases](https://github.com/GetStream/meeting-room-compose/releases) to download the latest APK.
+</div>
 
-<a href="https://getstream.io/video/docs/android?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss">
-<img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="12%"/>
-</a>
+## About
 
-## 🛥 Stream Video SDK
+Meeting Room is a native Android application centered around
+a simple experience: connecting people through real-time
+video and audio communication.
 
-**Meeting Room Compose** is built with __[Stream Video SDK for Compose](https://getstream.io/video/docs/android?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)__ to implement real-time video room features.
-If you’re interested in adding powerful In-App Video Calling, Audio Room, Livestream features to your app, check out the __[Android Video Calling Tutorial](https://getstream.io/video/docs/android/tutorials/video-calling/utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)__!
+The application combines a pre-call lobby, interactive video
+layouts, participant management, and essential multimedia
+controls within a declarative interface built with
+Jetpack Compose.
 
-- [Stream Video SDK for Android on GitHub](https://github.com/getStream/stream-video-android)
-- [Video Call Tutorials](https://getstream.io/video/docs/android/tutorials/video-calling?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)
-- [Audio Room Tutorials](https://getstream.io/video/docs/android/tutorials/audio-room?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)
-- [Livestream Tutorials](https://getstream.io/video/docs/android/tutorials/livestream/?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)
+From preparing the camera and microphone before joining
+a meeting to interacting with multiple participants,
+the interface focuses on making communication accessible
+and straightforward.
 
-## 💻 Build Your Own Video Meeting Room Project
+Part of my early explorations in Android development,
+this project represents an opportunity to experiment with
+real-time systems, multimedia integration, asynchronous
+state management, and the challenges of building
+connected mobile experiences.
 
-<details>
- <summary> If you want to build your own video meeting room project, you should follow the instructions below:</summary>
+## App Preview
 
-<de>
+<div align="center">
 
-1. Go to the __[Stream login page](https://getstream.io/try-for-free?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)__.
-2. If you have your GitHub account, click the **SIGN UP WITH GITHUB** button and you can sign up within a couple of seconds.
+  <img
+    src="./previews/preview0.png"
+    alt="Meeting lobby with camera and microphone controls"
+    width="30%"
+  />
+  <img
+    src="./previews/preview1.png"
+    alt="Two-participant video call with an embedded local video preview"
+    width="30%"
+  />
+  <img
+    src="./previews/preview2.png"
+    alt="Multi-participant video conference with an adaptive grid layout"
+    width="30%"
+  />
 
-![stream](figures/stream0.png)
+  <p>
+    <sub>
+      Meeting lobby · Video calling · Multi-participant conferencing
+    </sub>
+  </p>
 
-3. If you don't have a GitHub account, fill in the inputs and click the **START FREE TRIAL** button.
-4. Go to the __[Dashboard](https://dashboard.getstream.io?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)__ and click the **Create App** button like the below.
+</div>
 
-![stream](figures/stream1.png)
+### Before the Meeting
 
-5. Fill in the blanks like the below and click the **Create App** button.
+The pre-call lobby provides a dedicated space to prepare
+the device before entering a meeting.
 
-![stream](figures/stream2.png)
+Users can preview their camera, configure microphone
+and camera availability, inspect participant presence,
+and join the configured meeting room.
 
-6. You will see the **Key** like the figure below and then copy it.
+### During the Meeting
 
-![stream](figures/stream3.png)
+The active meeting interface prioritizes communication
+through an adaptive participant layout and a compact
+set of multimedia controls.
 
-7. Go to the [MeetingRoomApp](https://github.com/GetStream/meeting-room-compose/blob/main/app/src/main/kotlin/io/getstream/meeting/room/compose/MeetingRoomApp.kt#L39) class and change the `apiKey` property with your key.
+Video streams, participant avatars, microphone indicators,
+and connection information provide visual context
+throughout the conversation.
 
-8. Build and run the project.
+The layout adapts to different participant configurations,
+from individual conversations to group meetings.
 
-</details>
+## Features
 
-## 📷 Previews
+| Feature | Description |
+| :--- | :--- |
+| **Real-Time Video Calling** | Interactive video communication between connected participants. |
+| **Audio Communication** | Real-time microphone input and audio playback. |
+| **Meeting Lobby** | Prepare multimedia devices before joining a call. |
+| **Camera Preview** | Preview the local video feed before entering a meeting. |
+| **Group Meetings** | Display multiple participants within a shared video conference. |
+| **Adaptive Video Layout** | Organize participant video streams according to the meeting configuration. |
+| **Microphone Control** | Enable or disable microphone input during a meeting. |
+| **Camera Control** | Enable or disable the local video stream. |
+| **Camera Switching** | Switch between available device cameras. |
+| **Participant Indicators** | Display participant identities, avatars, and media status. |
+| **Speaking While Muted** | Notify users when speech is detected while the microphone is muted. |
+| **Picture-in-Picture** | Support continued video visualization through the SDK's PiP integration. |
+| **Runtime Permissions** | Request the required Android multimedia permissions. |
+| **Reactive UI** | Synchronize the interface with changing call and device states. |
 
-<p align="center">
-<img src="previews/preview0.png" alt="drawing" width="330" />
-<img src="previews/preview2.png" alt="drawing" width="330" />
-</p>
+## Meeting Experience
 
-## 🛠 Tech Stack & Open Source Libraries
+The application follows a straightforward meeting lifecycle,
+from initial client configuration to active communication
+and call termination.
 
-- Minimum SDK level 21.
-- 100% [Jetpack Compose](https://developer.android.com/jetpack/compose) based + [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) + [Flow](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/) for asynchronous.
-- [Stream Video SDK for Compose](https://getstream.io/video/docs/android?utm_source=Github&utm_medium=Jaewoong_OSS&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss): Stream's versatile Core + Compose UI component libraries that allow you to build video calling, audio room, and, live streaming apps based on Webrtc running on Stream's global edge network.
-- Jetpack
-  - Compose: Android’s modern toolkit for building native UI.
-  - ViewModel: UI related data holder and lifecycle aware.
-  - Navigation: For navigating screens and [Hilt Navigation Compose](https://developer.android.com/jetpack/compose/libraries#hilt) for injecting dependencies.
-  - [Hilt](https://dagger.dev/hilt/): Dependency Injection.
-- [Retrofit2 & OkHttp3](https://github.com/square/retrofit): Construct the REST APIs and paging network data.
-- [Sandwich](https://github.com/skydoves/sandwich): An adaptable and lightweight sealed API library designed for Kotlin and Android, specializing in efficient Retrofit response modeling and exception handling.
-- [ksp](https://github.com/google/ksp): Kotlin Symbol Processing API.
+```mermaid
+flowchart TD
 
-## 👨‍👨‍👦‍👦 Testing Multiple Participants
+    START["Launch Application"]
 
-For interactive tests across different platforms, you can utilize Stream web applications. You can simply join the web application with [Stream Video Web Demo](https://getstream.io/video/demos/?id=GzGQPrISLSHk).
+    subgraph Lobby["Pre-Call Experience"]
+        INIT["Initialize Video Client"]
+        ROOM["Resolve Meeting Room"]
+        PREVIEW["Local Camera Preview"]
+        DEVICES["Configure Camera and Microphone"]
 
-![Stream Video Web Demo](https://github.com/GetStream/stream-video-android/assets/24237865/e2b4d958-53a5-44c6-953a-5c957095d72d)
+        INIT --> ROOM
+        ROOM --> PREVIEW
+        PREVIEW --> DEVICES
+    end
 
-## 🤝 Contribution
+    JOIN["Join Meeting"]
+    PERMISSIONS{"Required Permissions"}
+    CONNECT["Connect to Call"]
 
-Most of the features are not completed except the chat feature, so anyone can contribute and improve this project following the [Contributing Guideline](https://github.com/GetStream/meeting-room-compose/blob/main/CONTRIBUTING.md).
+    subgraph Active["Active Meeting"]
+        SESSION["Real-Time Call State"]
+        MEDIA["Local and Remote Media Streams"]
+        PARTICIPANTS["Adaptive Participant Layout"]
+        CONTROLS["Multimedia Controls"]
+        PIP["Picture-in-Picture"]
 
-## Find this repository useful? 💙
-Support it by joining __[stargazers](https://github.com/GetStream/meeting-room-compose/stargazers)__ for this repository. :star: <br>
-Also, follow __[maintainers](https://github.com/skydoves)__ on GitHub for our next creations! 🤩
+        SESSION --> MEDIA
+        MEDIA --> PARTICIPANTS
+        CONTROLS --> SESSION
+        MEDIA -.-> PIP
+    end
 
-# License
-```xml
-Copyright 2023 Stream.IO, Inc. All Rights Reserved.
+    ERROR["Connection Error"]
+    LEAVE["Leave Meeting"]
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+    START --> INIT
+    DEVICES --> JOIN
+    JOIN --> PERMISSIONS
+    PERMISSIONS -->|Granted| CONNECT
+    PERMISSIONS -->|Not Granted| PERMISSIONS
+    CONNECT -->|Success| SESSION
+    CONNECT -->|Failure| ERROR
 
-   http://www.apache.org/licenses/LICENSE-2.0
+    SESSION --> LEAVE
+    LEAVE --> ROOM
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+    classDef lobby fill:#12343B,stroke:#22D3EE,color:#ECFEFF
+    classDef active fill:#252346,stroke:#A78BFA,color:#F5F3FF
+    classDef action fill:#163D32,stroke:#34D399,color:#ECFDF5
+    classDef error fill:#452626,stroke:#F87171,color:#FEF2F2
+
+    class INIT,ROOM,PREVIEW,DEVICES lobby
+    class SESSION,MEDIA,PARTICIPANTS,CONTROLS,PIP active
+    class START,JOIN,CONNECT,LEAVE action
+    class ERROR error
 ```
+
+The application manages the native Android interface,
+navigation, device interaction, and observable UI state.
+
+The underlying video SDK handles real-time media transport,
+call connectivity, and participant synchronization.
+
+## Under the Hood
+
+Meeting Room explores the relationship between declarative
+Android interfaces and asynchronous communication systems.
+
+The application uses ViewModels to coordinate screen
+state and meeting operations, while Jetpack Compose
+reacts to changes in camera availability, microphone
+status, connection results, and participant information.
+
+### Application Architecture
+
+| Component | Responsibility |
+| :--- | :--- |
+| `MeetingRoomApp` | Application initialization and meeting configuration. |
+| `MainActivity` | Native Android activity and application entry point. |
+| `MeetingRoomNavHost` | Navigation between the lobby and active meeting. |
+| `MainViewModel` | Video client initialization and pre-call state management. |
+| `LobbyScreen` | Meeting preparation and local multimedia controls. |
+| `CallViewModel` | Meeting connection, call termination, and connection state. |
+| `CallScreen` | Active meeting interface and participant rendering. |
+| `MeetingRoomTheme` | Application appearance and video component styling. |
+
+### Reactive State Management
+
+The application uses Kotlin Flow and StateFlow to
+represent observable changes throughout the meeting
+lifecycle.
+
+The lobby and active meeting maintain independent
+UI state models, allowing the interface to respond
+to loading, connection, and error conditions.
+
+Lifecycle-aware state collection connects these
+models to the corresponding Compose screens.
+
+### Real-Time Communication
+
+Real-time video and audio communication are provided
+through the Stream Video SDK for Android, which uses
+WebRTC-based multimedia infrastructure.
+
+The project explores the integration of:
+
+- Local camera and microphone management.
+- Remote participant video rendering.
+- Reactive call and participant state.
+- Asynchronous meeting operations.
+- Android multimedia permissions.
+- Picture-in-Picture integration.
+
+The application builds upon the SDK's communication
+infrastructure rather than implementing a custom
+WebRTC signaling server or media transport engine.
+
+## Technology Stack
+
+| Technology | Responsibility |
+| :--- | :--- |
+| **Kotlin** | Native Android application development. |
+| **Jetpack Compose** | Declarative user interfaces. |
+| **Material Design** | Application styling and interactive components. |
+| **WebRTC** | Real-time multimedia communication through the video SDK. |
+| **Stream Video SDK** | Call connectivity, participant synchronization, and media integration. |
+| **Kotlin Coroutines** | Asynchronous operations and structured concurrency. |
+| **Flow & StateFlow** | Observable application and multimedia state. |
+| **Android ViewModel** | Screen-level state and lifecycle management. |
+| **Navigation Compose** | Declarative navigation between application screens. |
+| **Hilt** | Dependency injection and ViewModel integration. |
+| **Accompanist Permissions** | Runtime permission management. |
+| **KSP** | Kotlin symbol processing. |
+| **Gradle** | Android build and dependency management. |
+
+### Platform Configuration
+
+| Property | Configuration |
+| :--- | :--- |
+| Platform | Native Android |
+| Minimum Android Version | Android 7.0 — API 24 |
+| Target SDK | API 34 |
+| Compile SDK | API 34 |
+| Kotlin | 1.9.22 |
+| Gradle | 8.2 |
+| Android Gradle Plugin | 8.2.2 |
+| Compose BOM | 2024.05.00 |
+| Video SDK | 0.5.1 |
+| Development JDK | 17 |
+| Application Version | 1.0 |
+
+Dependency versions are managed through the Gradle
+version catalog:
+
+[`gradle/libs.versions.toml`](./gradle/libs.versions.toml)
+
+## Getting Started
+
+### Requirements
+
+- Android Studio.
+- JDK 17.
+- Android SDK 34.
+- An Android device or compatible emulator running API 24 or newer.
+- Internet connectivity.
+- A configured video service application with valid credentials.
+
+A physical Android device is recommended when testing
+camera behavior, microphone input, and real-time calls.
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/4beru/android-video-meeting.git
+
+cd android-video-meeting
+```
+
+### Configure the Video Service
+
+The current implementation uses a predefined meeting
+configuration and demonstration user initialization.
+
+Meeting configuration is located in:
+
+[`MeetingRoomApp.kt`](./app/src/main/kotlin/io/getstream/meeting/room/compose/MeetingRoomApp.kt)
+
+The video client and user initialization are handled by:
+
+[`LobbyViewModel.kt`](./app/src/main/kotlin/io/getstream/meeting/room/compose/ui/lobby/LobbyViewModel.kt)
+
+Configure the application with:
+
+- A valid video service API key.
+- An authenticated user identity.
+- A valid user access token.
+- A meeting type and meeting identifier.
+
+Participants must use compatible credentials and the
+same meeting identifier to join a shared call.
+
+> [!IMPORTANT]
+> The existing demonstration configuration is intended
+> for experimentation rather than production deployment.
+>
+> A production application should use unique authenticated
+> user identities and securely generated access tokens.
+> Server-side signing secrets must never be embedded
+> in the Android application.
+
+### Run with Android Studio
+
+1. Open the repository in Android Studio.
+2. Configure JDK 17 and Android SDK 34.
+3. Synchronize the Gradle project.
+4. Configure the video service credentials.
+5. Select the `app` module.
+6. Run the application on an Android device or emulator.
+
+### Build from the Terminal
+
+On Linux or macOS:
+
+```bash
+./gradlew :app:assembleDebug
+```
+
+On Windows:
+
+```powershell
+.\gradlew.bat :app:assembleDebug
+```
+
+The generated APK is available at:
+
+```text
+app/build/outputs/apk/debug/app-debug.apk
+```
+
+### Install on a Physical Device
+
+Connect an Android device with USB debugging enabled.
+
+```bash
+adb devices -l
+```
+
+Install the generated APK:
+
+```bash
+adb install -r app/build/outputs/apk/debug/app-debug.apk
+```
+
+Launch the application:
+
+```bash
+adb shell am start -n io.getstream.meeting.room.compose/.MainActivity
+```
+
+Grant the required camera and microphone permissions
+when requested by the application.
+
+### Test a Group Meeting
+
+To explore multi-participant communication, run the
+application on multiple Android devices or emulators.
+
+Configure each instance with a distinct authenticated
+user identity and the same meeting identifier.
+
+This allows experimentation with participant layouts,
+camera switching, microphone controls, and changing
+meeting state.
+
+## Project Structure
+
+```text
+android-video-meeting/
+│
+├── app/
+│   ├── src/main/
+│   │   ├── kotlin/io/getstream/meeting/room/compose/
+│   │   │   ├── ui/
+│   │   │   │   ├── call/
+│   │   │   │   │   ├── CallScreen.kt
+│   │   │   │   │   └── CallViewModel.kt
+│   │   │   │   ├── lobby/
+│   │   │   │   │   ├── LobbyScreen.kt
+│   │   │   │   │   └── LobbyViewModel.kt
+│   │   │   │   ├── component/
+│   │   │   │   ├── MeetingRoomNavHost.kt
+│   │   │   │   └── MeetingRoomTheme.kt
+│   │   │   ├── MainActivity.kt
+│   │   │   └── MeetingRoomApp.kt
+│   │   ├── res/
+│   │   └── AndroidManifest.xml
+│   └── build.gradle.kts
+│
+├── previews/
+│   ├── meeting-room_eyecatch.png
+│   ├── preview0.png
+│   ├── preview1.png
+│   └── preview2.png
+│
+├── gradle/
+│   ├── wrapper/
+│   └── libs.versions.toml
+│
+├── build.gradle.kts
+├── settings.gradle.kts
+├── gradle.properties
+├── gradlew
+├── LICENSE
+└── README.md
+```
+
+## Project Status
+
+Meeting Room is preserved as an exploratory Android
+project rather than a production-ready conferencing
+platform.
+
+The current implementation focuses on the meeting
+experience and the integration of real-time
+communication into a native mobile interface.
+
+Potential areas for further development include:
+
+- Secure user authentication and token management.
+- Dynamic meeting creation and room identifiers.
+- Improved connection recovery and error handling.
+- Screen sharing and additional collaboration tools.
+- Updated Android and video SDK dependencies.
+- Reproducible development environments using Nix.
+- Automated UI and integration testing.
+
+## Early Works
+
+Meeting Room represents an early exploration of
+connected mobile applications and real-time interaction.
+
+Unlike applications built primarily around static
+content, communication software introduces a different
+set of challenges: continuously changing state,
+asynchronous events, multimedia resources, and the
+coordination of multiple connected participants.
+
+This project remains part of my journey in Android
+development, reflecting an interest in understanding
+how native interfaces and real-time systems can work
+together to create meaningful digital experiences.
+
+## License
+
+The repository includes an
+[Apache License 2.0](./LICENSE) file.
+
+Based on the original Meeting Room Compose
+implementation by Stream.
+
+Original source copyright notices and applicable
+component-specific licensing terms remain in effect.
+
+---
+
+<div align="center">
+
+  <h3>Different places, shared moments.</h3>
+
+  <p>
+    Part of my <strong>Early Works</strong> — a collection
+    of experiments, first ideas, and creative projects
+    that shaped my journey as a software developer.
+  </p>
+
+  <p>
+    <sub>Curated by Abel Ortega.</sub>
+  </p>
+
+  <a href="https://github.com/4beru">GitHub</a> ·
+  <a href="https://www.aberu.site">Portfolio</a>
+
+</div>
